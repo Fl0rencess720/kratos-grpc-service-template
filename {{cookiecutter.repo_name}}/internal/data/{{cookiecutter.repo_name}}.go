@@ -1,8 +1,6 @@
 package data
 
 import (
-	"context"
-
 	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/biz"
 	"github.com/go-kratos/kratos/v2/log"
 )

@@ -16,7 +16,7 @@ import (
 	"go.opentelemetry.io/otel/sdk/resource"
 	tracesdk "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
-	"{{cookiecutter.module_name}}/app/rank/internal/conf"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/conf"
 	"{{cookiecutter.module_name}}/pkgs/viperConf"
 	"{{cookiecutter.module_name}}/pkgs/zapLogger"
 

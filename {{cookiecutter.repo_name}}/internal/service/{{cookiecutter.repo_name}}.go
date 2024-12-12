@@ -1,8 +1,6 @@
 package service
 
 import (
-	"context"
-
 	v1 "{{cookiecutter.module_name}}/api/gateway/{{cookiecutter.repo_name}}/v1"
 	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/biz"
 )
