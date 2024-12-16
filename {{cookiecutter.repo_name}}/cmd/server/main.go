@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 
 	"github.com/go-kratos/kratos/v2"
@@ -12,7 +13,7 @@ import (
 	"github.com/go-kratos/kratos/v2/transport/grpc"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/exporters/jaeger"
+	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
 	"go.opentelemetry.io/otel/sdk/resource"
 	tracesdk "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
@@ -54,8 +55,7 @@ func newApp(logger log.Logger, gs *grpc.Server, rr registry.Registrar) *kratos.A
 }
 
 func initTracer(url string) error {
-	exp, err := jaeger.New(jaeger.WithCollectorEndpoint(jaeger.WithEndpoint(url)))
-
+	exp, err := otlptracehttp.New(context.Background(), otlptracehttp.WithEndpoint(url), otlptracehttp.WithInsecure())
 	if err != nil {
 		return err
 	}
