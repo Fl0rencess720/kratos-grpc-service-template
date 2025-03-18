@@ -6,11 +6,11 @@
 package main
 
 import (
-	"{{cookiecutter.module_name}}/internal/biz"
-	"{{cookiecutter.module_name}}/internal/conf"
-	"{{cookiecutter.module_name}}/internal/data"
-	"{{cookiecutter.module_name}}/internal/server"
-	"{{cookiecutter.module_name}}/internal/service"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/biz"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/conf"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/data"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/server"
+	"{{cookiecutter.module_name}}/app/{{cookiecutter.repo_name}}/internal/service"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 )
